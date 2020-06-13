@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "../hooks/useForm";
+import { useDarkMode } from "../hooks/useDarkMode";
 
 const initialFormValues = {
   firstName: "",
@@ -23,9 +24,12 @@ const CheckoutForm = (props) => {
     initialFormValues
   )
 
-  // const handleChanges = (e) => {
-  //   setValues({ ...values, [e.target.name]: e.target.value });
-  // };
+  const [darkMode, setDarkMode] = useDarkMode(false);
+  const toggleMode = (e) => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
+  };
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,6 +38,12 @@ const CheckoutForm = (props) => {
 
   return (
     <>
+         <div className="dark-mode__toggle">
+        <div
+          onClick={toggleMode}
+          className={darkMode ? "toggle toggled" : "toggle"}
+        />
+        </div>
       <form onSubmit={handleSubmit}>
         <h2>Checkout Form</h2>
         <label>
