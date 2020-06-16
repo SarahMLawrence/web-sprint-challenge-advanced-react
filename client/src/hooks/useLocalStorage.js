@@ -1,11 +1,5 @@
 import { useState } from "react";
 
-// set up state properly
-// capture the values from the form events
-// if localStorage data, use that. otherwise use initalValues
-// update localStorage when needed
-
-// key: 'signupForm'
 export const useLocalStorage = (initialValue, key) => {
   const [storedValue, setStoredValue] = useState(() => {
     if (window.localStorage.getItem(key)) {
@@ -15,7 +9,7 @@ export const useLocalStorage = (initialValue, key) => {
     return initialValue;
   });
 
-  const setValue = value => {
+  const setValue = (value) => {
     setStoredValue(value);
     window.localStorage.setItem(key, JSON.stringify(value));
   };

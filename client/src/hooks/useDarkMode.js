@@ -11,7 +11,6 @@ export const useDarkMode = (key) => {
     } else if (darkMode == false) {
       // if false - remove dark-mode from body
       document.body.classList.remove("dark-mode");
-      
     }
   }, [darkMode]);
 

@@ -29,16 +29,23 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
-
+    1. component that extends to React.component
+    2. can accpet props
+    3. maintain own data with state
+    4. must have a render() method 
+    Components that include constructors, lifecycle methods, render(), function and state management
 2. Describe the different phases of the component lifecycle.
-    1. componentDidMount
-    2. componentDidUpdate
-    3. 
+    1. componentDidMount: birth/mounting
+    2. componentDidUpdate: growth/updating
+    3. componentDidUnmount: death/unmounting
 
 3. Demonstrate an understanding of class component lifecycle methods.
-
+       1. componentDidMount: after all the elements of page are rendered correctly this method will be called. 
+          We can call setState() to change the state. 
+    2. componentDidUpdate: 
+    3. componentDidUnmount: 
 4. Define stateful logic.
-
+   state that gets initialized in the constructor
 5. Describe how to test a React component with React Testing Library.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.

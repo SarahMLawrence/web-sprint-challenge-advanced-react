@@ -19,17 +19,13 @@ const CheckoutForm = (props) => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   // const [values, setValues] = useState(initialValue);
 
-  const [values,  handleChanges] = useForm(
-    "checkoutForm",
-    initialFormValues
-  )
+  const [values, handleChanges] = useForm("checkoutForm", initialFormValues);
 
   const [darkMode, setDarkMode] = useDarkMode(false);
   const toggleMode = (e) => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };
- 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -38,12 +34,12 @@ const CheckoutForm = (props) => {
 
   return (
     <>
-         <div className="dark-mode__toggle">
+      <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}
           className={darkMode ? "toggle toggled" : "toggle"}
         />
-        </div>
+      </div>
       <form onSubmit={handleSubmit}>
         <h2>Checkout Form</h2>
         <label>
